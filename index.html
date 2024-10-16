@@ -3,71 +3,54 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Clarity Studio</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
-    <link rel="stylesheet" href="style.css"> <!-- Link to external CSS file -->
-    <title>Clarity Studio</title>
+    <link rel="stylesheet" href="style.css"> <!-- Link to external CSS -->
 </head>
 <body>
 
-    <nav class="navbar navbar-expand-lg">
-        <a class="navbar-brand" href="#">
-            <i class="fas fa-camera" style="color: white;"></i> Clarity Studio
-        </a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarNav">
-            <ul class="navbar-nav ml-auto">
-                <li class="nav-item">
-                    <a class="nav-link" href="#">Home</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#">About</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#">Services</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#">Contact</a>
-                </li>
-            </ul>
-        </div>
-    </nav>
-
-    <div class="video-container">
-        <video id="background-video" autoplay muted loop>
-            <source src="video1.mp4" type="video/mp4">
-            <source src="video2.mp4" type="video/mp4">
-            <source src="video3.mp4" type="video/mp4">
-            Your browser does not support HTML5 video.
-        </video>
-
-        <div class="welcome-message">
-            <h1><em>Welcome to Clarity Studio</em></h1>
-            <a href="#" class="btn btn-primary btn-view-more">View More</a>
-        </div>
+<!-- Navbar -->
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <a class="navbar-brand" href="#">
+        <i class="fas fa-camera"></i> <!-- Camera icon -->
+        Clarity Studio
+    </a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ml-auto">
+            <li class="nav-item">
+                <a class="nav-link" href="#">Home</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#">About</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#">Services</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#">Contact</a>
+            </li>
+        </ul>
     </div>
+</nav>
 
-    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-    <script>
-        // JavaScript to cycle through videos
-        const videos = [
-            'video1.mp4',
-            'video2.mp4',
-            'video3.mp4'
-        ];
-        let currentVideo = 0;
+<!-- Video Background Section -->
+<div class="video-background">
+    <video autoplay loop muted>
+        <source src="video/video.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+    </video>
+    <div class="content">
+        <h1>Unleash Creativity with Clarity Studio</h1>
+        <a href="#" class="btn btn-primary learn-more-btn">Learn More</a>
+    </div>
+</div>
 
-        const videoElement = document.getElementById('background-video');
-
-        videoElement.addEventListener('ended', () => {
-            currentVideo = (currentVideo + 1) % videos.length;
-            videoElement.src = videos[currentVideo];
-            videoElement.play();
-        });
-    </script>
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 </body>
 </html>
